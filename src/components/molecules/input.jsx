@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import {React, useId} from 'react';
+import { React, useId } from 'react';
 import BaseLabel from '../atoms/label';
 
 const BaseInput = (props) => {
@@ -36,26 +36,24 @@ const BaseInput = (props) => {
   return (
     <div className={`relative ${className}`}>
       {label && (
-        <BaseLabel >
-          {label} {required && '*'}
+        <BaseLabel classname={'flex gap-2'}>
+          <div>{label}</div>
+          <div className='text-red-700'>{required && '*'}</div>
         </BaseLabel>
       )}
       <input
         id={id}
         type={type}
-        className={
-          `${styles.base}
+        className={`${styles.base}
           ${rounded && styles.rounded[rounded]}
           ${error ? styles.state.error : styles.state.normal}
           ${valid ? styles.state.valid : styles.state.normal}
-          ${disabled && styles.state.disabled}`
-        }
+          ${disabled && styles.state.disabled}`}
         disabled={disabled}
         required={required}
         {...rest}
       />
-      {error && <p className='mt-2 text-sm text-red-600'>{errorText}</p> }
-      
+      {error && <p className='mt-2 text-sm text-red-600'>{errorText}</p>}
     </div>
   );
 };
