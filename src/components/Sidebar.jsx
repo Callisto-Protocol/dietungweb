@@ -5,6 +5,8 @@ import { SiFuturelearn } from 'react-icons/si'
 import { SiOpenaccess } from 'react-icons/si'
 import { CgProfile } from 'react-icons/cg'
 import Logo from '../assets/logo.svg'
+import HamburgerButton from './atoms/Humberger/HumbergerButton'
+
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true)
@@ -58,6 +60,10 @@ const Sidebar = () => {
       </div>
       {/* Mobile Menu */}
       <div className="pt-3">
+        <HamburgerButton
+          setMobileMenu={setMobileMenu}
+          mobileMenu={mobileMenu}
+        />
       </div>
       <div className="sm:hidden">
         <div
