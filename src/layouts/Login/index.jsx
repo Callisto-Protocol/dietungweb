@@ -2,7 +2,7 @@ import BaseInput from '@/components/molecules/input';
 import React from 'react';
 
 const Login = () => (
-      <div className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-cover h-screen'>
+      <div className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-cover h-full border-2 border-red-500'>
         <div className='container mx-auto '>
           <div className='flex justify-center px-6 py-20'>
             <div className='w-full xl:w-3/4 lg:w-11/12 bg-gradient-to-br from-blue-600 via-blue-500 to-blue-700 flex shadow-2xl'>
